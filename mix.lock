@@ -1,0 +1,3 @@
+%{
+  "proper": {:hex, :proper, "1.4.0", "89a44b8c39d28bb9b4be8e4d715d534905b325470f2e0ec5e004d12484a79434", [:rebar3], [], "hexpm", "18285842185bd33efbda97d134a5cb5a0884384db36119fee0e3cfa488568cbb"},
+}
