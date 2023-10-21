@@ -2,7 +2,7 @@ defmodule PropexTest do
   use ExUnit.Case
   use PropEx
 
-  alias PropEx.Test.Arithmetics
+  alias PropEx.Test.{Arithmetics, Strings}
 
   describe "Arithmetics.add/2" do
     test "performs addition" do
@@ -32,6 +32,12 @@ defmodule PropexTest do
       forall arguments_of Arithmetics.add/2 do
         result - b == a &&
         result - a == b
+      end
+    end
+
+    test "tests Strings.concat/2 automatically" do
+      forall arguments_of Strings.concat/2 do
+        result == "#{a}#{b}"
       end
     end
   end
