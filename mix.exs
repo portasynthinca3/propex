@@ -7,7 +7,14 @@ defmodule Propex.MixProject do
       version: "0.1.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      description: "An adaptation of PropEr for the Elixir world",
+      deps: deps(),
+      package: package(),
+      docs: [
+        main: "readme",
+        extras: ["README.md"],
+        assets: "assets",
+      ],
     ]
   end
 
@@ -17,9 +24,22 @@ defmodule Propex.MixProject do
     ]
   end
 
+  def package do
+    [
+      name: :propex,
+      licenses: ["MIT"],
+      maintainers: ["portasynthinca3"],
+      links: %{
+        "GitHub" => "https://github.com/portasynthinca3/propex/",
+        "Docs" => "https://hexdocs.pm/propex",
+      },
+    ]
+  end
+
   defp deps do
     [
-      {:proper, "~> 1.4"}
+      {:proper, "~> 1.4"},
+      {:ex_doc, ">= 0.0.0", only: :dev},
     ]
   end
 end

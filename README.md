@@ -1,16 +1,19 @@
 # PropEx
-![shitpost-y logo](./logo.png)\
+![shitpost-y logo](assets/logo.png)
+
 <sup>~~I swear this is not a shitpost~~</sup>
 
-An adaptation of PropEr for the Elixir world. As of right now, this is a
-prototype. Feel free to open issues and send pull requests!
+An adaptation of PropEr for the Elixir world.
+
+**WARNING!:** As of right now, this is a prototype. Feel free to open issues and
+send pull requests!
 
 ## Installation
 Add the library as a dependency for the `test` environment
 ```elixir
 defp deps do
   [
-    {:propex, "~> 0.1", only: test}
+    {:propex, "~> 0.1", only: :test}
   ]
 end
 ```
